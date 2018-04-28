@@ -1,0 +1,70 @@
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flex > span {
+  display: block;
+  width: 33%;
+}
+
+
+.content {
+  box-sizing: border-box;
+  width: 65%;
+  margin: 10px auto 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0px #dbe6ec;
+}
+
+.content > * {
+  padding: 10px 10px;
+}
+
+.content > .header {
+  color: #acb1bf;
+  background-color: #ecf1f4;
+  border-bottom: 1px solid #d6e2eb;
+}
+
+.content > .entry {
+  border: 1px solid #eef1f5;
+  border-left: none;
+  border-right: none;
+}
+
+.sidebar {
+  box-sizing: border-box;
+  width: 30%;
+  max-width: 600px;
+  align-self: flex-start;
+  margin: 10px 20px 0 0;
+  padding: 0 15px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px 0px #dbe6ec;
+  color: #4a4a4a;
+  font-size: 0.85em;
+}
+
+.sidebar span {
+  display: block;
+  text-transform: uppercase;
+  margin: 15px 0 10px;
+}
+
+.sidebar select {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #dce0e4;
+}
+
+input[readonly="readonly"] {
+  border: 0;
+}

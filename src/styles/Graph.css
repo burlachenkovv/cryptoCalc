@@ -1,0 +1,7 @@
+.graph {
+	flex-grow: 2;
+}
+
+.graph select {
+	margin-bottom: 20px;
+}
