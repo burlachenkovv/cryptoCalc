@@ -1,7 +1,15 @@
 .graph {
-	flex-grow: 2;
+	width: 95%;
 }
-
 .graph select {
 	margin-bottom: 20px;
+}
+
+.livegraph {
+	width: 100%;
+	height: 300px;
+}
+.livegraph canvas {
+	width: 100% !important;
+	max-height: 250px !important;
 }

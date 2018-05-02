@@ -4,6 +4,7 @@ import Select from './Select.js';
 import Price from './Price.js';
 import Calculator from './Calculator.js';
 import Graph from './Graph.js';
+import LiveGraph from './LiveGraph.js';
 
 import './styles/App.css';
 
@@ -75,7 +76,6 @@ class App extends Component {
 
 		getData()
 		.then(data => {
-			//console.log(data);
 			this.setState((prev) => {
 				let newPrices = prev.cryptoCurrencies.map((item, i) => {
 					item.price = data[i];
@@ -110,15 +110,17 @@ class App extends Component {
 		let price = res.price[data[2]];
 
 		this.setState({
-			calcResult: `${data[0]} ${data[1]} = ${(price * data[0]).toFixed(2)} ${data[2]}`
+			calcResult: `${(price * data[0]).toFixed(2)} ${data[2]}`
 		});
 	}
 
 	render() {
 		let activeCurrency = [...this.state.currencies].filter((item) => item.isActive)[0];
+		let { price } = this.state.cryptoCurrencies[0];
+		let live = (price) ? <LiveGraph price={ price && price["USD"] } /> : null;
 
 		return (
-			<div className="flex">
+			<div className="flex">		
 				<div className="sidebar">
 					<span>Select currency</span>
 					<Select
@@ -141,6 +143,12 @@ class App extends Component {
 				/>
 
 				<Graph />
+
+				<div className="graph">
+					{
+						live
+					}
+				</div>
 			</div>
 		);
 	}

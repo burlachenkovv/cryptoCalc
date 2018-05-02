@@ -86,7 +86,7 @@ class Graph extends Component {
 
 		return (
 			<div className="graph">
-			<h2>BTC Price Changes</h2>
+			<h2>Bitcoin Price Changes</h2>
 				<select onChange={(e) => this.selectRange(e.target.value)}>
 					<option value="0">Day</option>
 					<option value="7">Week</option>
